@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Handover</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Handover</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html" class="active">Terms of Service</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Terms of Service</h1>
+                <p class="last-updated">Last Updated: January 12, 2026</p>
+            </div>
+        </section>
+
+        <section class="policy-content">
+            <div class="container">
+                <div class="policy-section">
+                    <h2>1. Agreement to Terms</h2>
+                    <p>By accessing or using the Handover application and services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this service.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>2. Description of Service</h2>
+                    <p>Handover is a desktop application built with Tauri (Rust framework) that provides secure peer-to-peer file transfer and messaging capabilities. The service consists of:</p>
+                    <ul>
+                        <li><strong>Desktop Application:</strong> A cross-platform desktop app for Windows, macOS, and Linux built with Tauri, providing a native user interface for file transfers and messaging</li>
+                        <li><strong>Backend Server (handover-backend):</strong> A Rust-based backend server that handles Google OAuth authentication, user presence management, friend/block list management, and WebRTC signaling</li>
+                        <li><strong>Peer-to-Peer Architecture:</strong> Direct file transfers and messaging between users via WebRTC data channels. Files never pass through our servers.</li>
+                        <li><strong>End-to-End Encryption:</strong> All P2P connections are encrypted using WebRTC's built-in DTLS-SRTP encryption</li>
+                        <li><strong>Friend System:</strong> Add friends, manage friend requests, and block unwanted users</li>
+                        <li><strong>Presence System:</strong> See which friends are online and available for file transfers</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>3. User Accounts</h2>
+                    <p>Handover uses Google OAuth for authentication. When you sign in with your Google account, you must ensure that your Google account information is accurate, complete, and current at all times.</p>
+                    <p>You are responsible for:</p>
+                    <ul>
+                        <li>Maintaining the security of your Google account credentials</li>
+                        <li>All activities that occur under your account in the Handover application</li>
+                        <li>Immediately notifying us of any unauthorized use of your account</li>
+                    </ul>
+                    <p>You may not share your account with others or allow others to access your account. Failure to maintain account security may result in immediate termination of your account.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>4. Acceptable Use</h2>
+                    <p>You agree to use Handover only for lawful purposes. You are prohibited from:</p>
+                    <ul>
+                        <li>Uploading, posting, or transmitting any content that is illegal, harmful, threatening, abusive, harassing, defamatory, vulgar, obscene, or otherwise objectionable</li>
+                        <li>Violating any applicable local, state, national, or international law</li>
+                        <li>Infringing upon or violating intellectual property rights or any other rights of others</li>
+                        <li>Transmitting any malware, viruses, or any code of a destructive nature</li>
+                        <li>Attempting to gain unauthorized access to the service, other accounts, or computer systems</li>
+                        <li>Interfering with or disrupting the service or servers or networks connected to the service</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>5. Content Ownership and Rights</h2>
+                    <p>You retain all rights to any content you transfer through the Handover service. Due to our peer-to-peer architecture:</p>
+                    <ul>
+                        <li><strong>No Server Storage:</strong> Files are transferred directly between users via WebRTC data channels. Our backend server (handover-backend) never receives, stores, or has access to your file contents.</li>
+                        <li><strong>No License Required:</strong> Since files never pass through our servers, you do not grant us any license to your content. We only facilitate the P2P connection through WebRTC signaling.</li>
+                        <li><strong>No Content Analysis:</strong> We do not and cannot access, view, scan, or analyze the content of your files or messages.</li>
+                    </ul>
+                    <p>You are solely responsible for the content you transfer and share through Handover. Ensure you have the right to share any content you transfer to other users.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>6. Service Availability</h2>
+                    <p>We strive to provide reliable service, but we do not guarantee that:</p>
+                    <ul>
+                        <li>The handover-backend server will be available 24/7 without interruption</li>
+                        <li>P2P connections between users will always succeed (network conditions, NAT types, and firewall configurations may affect connectivity)</li>
+                        <li>The desktop application will be compatible with all system configurations</li>
+                        <li>File transfers will complete successfully in all circumstances</li>
+                        <li>Google OAuth authentication will be continuously available</li>
+                        <li>Any bugs or errors in the Tauri application or backend will be immediately corrected</li>
+                    </ul>
+                    <p>We reserve the right to modify, suspend, or discontinue any part of the service (including the desktop application, backend server, or specific features) at any time without notice.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>7. Limitation of Liability</h2>
+                    <p>In no event shall Handover, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:</p>
+                    <ul>
+                        <li>Your access to or use of or inability to access or use the service</li>
+                        <li>Any conduct or content of any third party on the service</li>
+                        <li>Any content obtained from the service</li>
+                        <li>Unauthorized access, use, or alteration of your transmissions or content</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>8. Disclaimer of Warranties</h2>
+                    <p>The service is provided on an "AS IS" and "AS AVAILABLE" basis. The service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement, or course of performance.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>9. Indemnification</h2>
+                    <p>You agree to defend, indemnify, and hold harmless Handover and its licensee and licensors, and their employees, contractors, agents, officers, and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses arising from:</p>
+                    <ul>
+                        <li>Your use of and access to the service</li>
+                        <li>Your violation of any term of these Terms</li>
+                        <li>Your violation of any third party right, including without limitation any copyright, property, or privacy right</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>10. Termination</h2>
+                    <p>We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the service will immediately cease.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>11. Governing Law</h2>
+                    <p>These Terms shall be governed and construed in accordance with the laws of the jurisdiction in which Handover operates, without regard to its conflict of law provisions.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>12. Changes to Terms</h2>
+                    <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>13. Contact Information</h2>
+                    <p>If you have any questions about these Terms, please contact us:</p>
+                    <ul>
+                        <li>By visiting our <a href="index.html">homepage</a></li>
+                        <li>By visiting our GitHub repository</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>14. Severability</h2>
+                    <p>If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>15. Entire Agreement</h2>
+                    <p>These Terms constitute the entire agreement between us regarding our service and supersede and replace any prior agreements we might have between us regarding the service.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Handover. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

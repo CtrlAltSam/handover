@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Handover</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Handover</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="privacy.html" class="active">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Privacy Policy</h1>
+                <p class="last-updated">Last Updated: January 12, 2026</p>
+            </div>
+        </section>
+
+        <section class="policy-content">
+            <div class="container">
+                <div class="policy-section">
+                    <h2>1. Introduction</h2>
+                    <p>Welcome to Handover. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you use our desktop application (built with Tauri) or interact with our backend services (handover-backend), and tell you about your privacy rights and how the law protects you.</p>
+                    <p>Handover is a desktop application built with Tauri (Rust) that facilitates secure peer-to-peer file transfers and messaging. Our backend server (handover-backend) handles authentication, presence management, and WebRTC signaling, but does not access or store your file contents.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>2. Information We Collect</h2>
+                    <p>We may collect, use, store and transfer different kinds of personal data about you:</p>
+                    <ul>
+                        <li><strong>Authentication Data:</strong> We use Google OAuth for authentication. When you sign in, we receive your Google ID, email address, and display name from Google. We do not store your Google password.</li>
+                        <li><strong>Profile Information:</strong> includes your display name, email address, and optional profile picture URL</li>
+                        <li><strong>Presence Data:</strong> includes your online/offline status and last activity timestamp to facilitate friend connections</li>
+                        <li><strong>Friendship Data:</strong> includes your friend list, friend requests, and block list stored in our PostgreSQL database</li>
+                        <li><strong>Technical Data:</strong> includes IP address (for WebRTC signaling only, not permanently stored), operating system (Windows/macOS/Linux), and Tauri application version</li>
+                        <li><strong>Room and Signaling Data:</strong> includes WebRTC signaling messages (ICE candidates, SDP offers/answers) temporarily stored to facilitate P2P connections</li>
+                        <li><strong>Usage Data:</strong> includes information about how you use the desktop application, such as connection attempts and presence pings</li>
+                        <li><strong>File Transfer Metadata:</strong> We do NOT store file names, sizes, or contents. File transfers occur directly peer-to-peer between users via WebRTC data channels.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>3. How We Use Your Information</h2>
+                    <p>We use your personal data for the following purposes:</p>
+                    <ul>
+                        <li>To provide and maintain our service</li>
+                        <li>To notify you about changes to our service</li>
+                        <li>To provide customer support</li>
+                        <li>To gather analysis or valuable information to improve our service</li>
+                        <li>To monitor the usage of our service</li>
+                        <li>To detect, prevent and address technical issues</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>4. Data Security</h2>
+                    <p>We have implemented appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. Key security features include:</p>
+                    <ul>
+                        <li><strong>Peer-to-Peer Architecture:</strong> All file transfers and messages occur directly between users via WebRTC data channels. The handover-backend server never sees or stores your file contents.</li>
+                        <li><strong>End-to-End Encryption:</strong> WebRTC connections are encrypted by default using DTLS-SRTP. Your files and messages are encrypted during transfer.</li>
+                        <li><strong>Secure Authentication:</strong> We use Google OAuth 2.0 for authentication and JWT tokens (signed with HS256) for API authorization. No passwords are stored.</li>
+                        <li><strong>Backend Security:</strong> The handover-backend is built with Rust and uses secure practices including parameterized SQL queries to prevent injection attacks.</li>
+                        <li><strong>Database Encryption:</strong> User data is stored in a PostgreSQL database with encrypted connections (SSL/TLS).</li>
+                        <li><strong>Desktop Security:</strong> The Tauri application runs with restricted capabilities and follows platform security best practices.</li>
+                        <li><strong>Limited Access:</strong> Personal data access is limited to essential backend operations only (authentication, presence, signaling).</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>5. Data Retention</h2>
+                    <p>We will only retain your personal data for as long as necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any legal, accounting, or reporting requirements.</p>
+                    <p><strong>File Content:</strong> Files transferred through Handover are NEVER stored on our servers. All file transfers occur directly peer-to-peer between users via encrypted WebRTC data channels.</p>
+                    <p><strong>Signaling Data:</strong> WebRTC signaling messages (ICE candidates, SDP offers/answers) are temporarily stored in memory during connection establishment and deleted immediately after the P2P connection is established or the room is closed.</p>
+                    <p><strong>Account Data:</strong> Your profile information, friend list, and presence data remain in our PostgreSQL database as long as your account is active. You can request account deletion at any time.</p>
+                    <p><strong>Authentication Tokens:</strong> JWT tokens expire after a set period and are not permanently stored on the backend.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>6. Your Rights</h2>
+                    <p>Under certain circumstances, you have rights under data protection laws in relation to your personal data, including the right to:</p>
+                    <ul>
+                        <li>Request access to your personal data</li>
+                        <li>Request correction of your personal data</li>
+                        <li>Request erasure of your personal data</li>
+                        <li>Object to processing of your personal data</li>
+                        <li>Request restriction of processing your personal data</li>
+                        <li>Request transfer of your personal data</li>
+                        <li>Withdraw consent</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>7. Third-Party Services</h2>
+                    <p>We integrate with the following third-party services:</p>
+                    <ul>
+                        <li><strong>Google OAuth 2.0:</strong> We use Google's authentication service to verify your identity. When you sign in, Google shares your basic profile information (Google ID, email, display name) with us. Please review <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a> for information on how Google handles your data.</li>
+                        <li><strong>WebRTC/STUN Servers:</strong> We may use public STUN servers to facilitate NAT traversal for P2P connections. These servers help establish direct connections but do not access your file content.</li>
+                    </ul>
+                    <p>These third parties have access to your personal data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>8. Cookies</h2>
+                    <p>We use cookies and similar tracking technologies to track activity on our website and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>9. Children's Privacy</h2>
+                    <p>Our service is not directed to children under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and you are aware that your child has provided us with personal data, please contact us.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>10. Changes to This Privacy Policy</h2>
+                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top of this Privacy Policy.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>11. Contact Us</h2>
+                    <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                    <ul>
+                        <li>By visiting our <a href="index.html">homepage</a></li>
+                        <li>By visiting our GitHub repository</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Handover. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
